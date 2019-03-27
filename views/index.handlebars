@@ -1,0 +1,48 @@
+<h1> Raider Report!</h1>
+<h2>Catch up on the silver and black ! Go Raiders!</h2>
+
+<ul>
+  {{#each Articles}}
+     
+      <div>
+  <div id="Articles"></div>
+</div>
+
+<div class="modal fade" id="noteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Write a Note here!</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+          </ul>
+ {{/each}}
+        
+        <h3>Add A Note</h3>
+
+<ul>
+  {{#each notes}}
+    {{#if saved}}
+      {{> notes/newNote saved=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+        
+        <div class="md-form">
+          <label data-error="wrong" data-success="right" for="form8">Your Notes</label>
+          <i class="fa fa-pencil prefix grey-text"></i>
+          <textarea type="text" id="notes" class="md-textarea form-control" rows="4"></textarea>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button id='saveNote' class="btn btn-unique">Save <i class="fa fa-paper-plane-o ml-1"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
